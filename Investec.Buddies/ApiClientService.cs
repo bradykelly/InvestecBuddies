@@ -1,11 +1,12 @@
-﻿using System.Text.Json.Serialization;
-using Newtonsoft.Json;
+﻿using System.Text.Json;
 
 namespace Investec.Buddies;
 
+/// <summary>
+/// A basic client for the Star Wars API at https://swapi.co/
+/// </summary>
 public class ApiClientService : IApiClientService
 {
-    private const string BaseUrl = "https://swapi.dev/api/people/?page=1";
     private readonly HttpClient _client;
 
     public ApiClientService(HttpClient client)
@@ -13,15 +14,18 @@ public class ApiClientService : IApiClientService
         _client = client;
     }
 
-    public async Task<List<Character>> GetAllCharactersAsync()
+    public async Task<List<StarWarsCharacter>> GetAllCharactersAsync()
     {
-        var characters = new List<Character>();
+        var characters = new List<StarWarsCharacter>();
 
-        string url = BaseUrl;
+        string? url = "https://swapi.dev/api/people";
         do
         {
-            var responseString = await _client.GetStringAsync(url);
-            var page = JsonConvert.DeserializeObject<People>(responseString);
+            var responseJson = "";
+            var options = new JsonSerializerOptions{ PropertyNameCaseInsensitive = true };
+            
+            responseJson = await _client.GetStringAsync(url);
+            var page = JsonSerializer.Deserialize<PeopleResponse>(responseJson, options);
             if (page != null)
             {
                 characters.AddRange(page.Results);
@@ -29,8 +33,7 @@ public class ApiClientService : IApiClientService
             }
 
         } while (url != null);
-
-
-        return null;
+        
+        return characters;
     }
 }

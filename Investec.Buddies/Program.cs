@@ -10,4 +10,4 @@ IHost host = Host.CreateDefaultBuilder(args)
     .Build();
 
 var finder = host.Services.GetRequiredService<IBuddieFinder>();
-finder.FindBuddies("Luke Skywalker");
+await finder.FindBuddies("Luke Skywalker");
