@@ -5,9 +5,9 @@ IHost host = Host.CreateDefaultBuilder(args)
     {
         services.AddHttpClient();
         services.AddTransient<IApiClientService, ApiClientService>();
-        services.AddTransient<IBuddieFinder, BuddieFinder>();
+        services.AddTransient<IBuddyFinder, BuddyFinder>();
     })
     .Build();
 
-var finder = host.Services.GetRequiredService<IBuddieFinder>();
-await finder.FindBuddies("Luke Skywalker");
+var finder = host.Services.GetRequiredService<IBuddyFinder>();
+var budyLists = await finder.FindBuddyLists();

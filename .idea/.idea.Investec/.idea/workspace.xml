@@ -7,11 +7,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47cc79eb-3374-4720-898a-52f46936e7d6" name="Changes" comment="API call finally working">
+    <list default="true" id="47cc79eb-3374-4720-898a-52f46936e7d6" name="Changes" comment="Improved some property names">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Investec/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Investec/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Investec.Buddies/ApiClientService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Investec.Buddies/ApiClientService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Investec.Buddies/PeopleResponse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Investec.Buddies/PeopleResponse.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Investec.Buddies/StarWarsCharacter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Investec.Buddies/StarWarsCharacter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Investec.Buddies/BuddieFinder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Investec.Buddies/BuddieFinder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Investec.Buddies/IBuddieFinder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Investec.Buddies/IBuddieFinder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Investec.Buddies/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Investec.Buddies/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +27,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/c6ad457575d35dcbff26c9a5e3fb1d92f1d3c55f25ef6ebf475367b5d8/List.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Personal/Dotnet Projects/TestDome/Investec/Investec.Buddies/ApiClientService.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Personal/Dotnet Projects/TestDome/Investec/Investec.Buddies/ApiClientService.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -78,7 +79,7 @@
       <updated>1657106004860</updated>
       <workItem from="1657106007715" duration="3626000" />
       <workItem from="1657120335199" duration="3286000" />
-      <workItem from="1657127156832" duration="2191000" />
+      <workItem from="1657127156832" duration="3963000" />
     </task>
     <task id="LOCAL-00001" summary="New gitignore">
       <created>1657109015046</created>
@@ -94,7 +95,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657128996316</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Improved some property names">
+      <created>1657129590674</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1657129590674</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -117,7 +125,8 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="New gitignore" />
     <MESSAGE value="API call finally working" />
-    <option name="LAST_COMMIT_MESSAGE" value="API call finally working" />
+    <MESSAGE value="Improved some property names" />
+    <option name="LAST_COMMIT_MESSAGE" value="Improved some property names" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2048,19 +2057,6 @@
           </properties>
           <option name="timeStamp" value="328" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Investec.Buddies/BuddieFinder.cs</url>
-          <line>17</line>
-          <properties documentPath="D:\Personal\Dotnet Projects\TestDome\Investec\Investec.Buddies\BuddieFinder.cs" initialLine="17" containingFunctionPresentation="method 'FindBuddies'">
-            <startOffsets>
-              <option value="449" />
-            </startOffsets>
-            <endOffsets>
-              <option value="464" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="331" />
-        </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
         <breakpoint enabled="true" type="DotNet Exception Breakpoints" />
