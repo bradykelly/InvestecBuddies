@@ -28,7 +28,7 @@ public class ApiClientService : IApiClientService
             var page = JsonSerializer.Deserialize<PeopleResponse>(responseJson, options);
             if (page != null)
             {
-                characters.AddRange(page.Results);
+                characters.AddRange(page.Characters);
                 url = page.Next;
             }
 
