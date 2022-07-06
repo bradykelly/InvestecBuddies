@@ -2,5 +2,5 @@
 
 public interface IApiClientService
 {
-    Task<List<StarWarsCharacter>> GetAllCharactersAsync();
+    Task<List<StarWarsCharacter>> GetAllCharacters();
 }

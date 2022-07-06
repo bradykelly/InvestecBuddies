@@ -14,7 +14,7 @@ public class ApiClientService : IApiClientService
         _client = client;
     }
 
-    public async Task<List<StarWarsCharacter>> GetAllCharactersAsync()
+    public async Task<List<StarWarsCharacter>> GetAllCharacters()
     {
         var characters = new List<StarWarsCharacter>();
 

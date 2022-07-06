@@ -14,13 +14,13 @@ public class BuddyFinder : IBuddyFinder
     }
 
     /// <summary>
-    ///  Find all lists of characters with the same sets of films.
+    ///  Find all Star Wars characters that are buddies.
     /// </summary>
-    /// <returns>All lists of characters that are buddies, i.e they have the same sets of films.</returns>
+    /// <returns>All lists of characters that are buddies, i.e they have the same lists of films.</returns>
     public async Task<List<List<StarWarsCharacter>>> FindBuddyLists()
     {
         var allBuddies = new List<List<StarWarsCharacter>>();
-        var characters = await _apiClientService.GetAllCharactersAsync();
+        var characters = await _apiClientService.GetAllCharacters();
         
         foreach(var baseCharacter in characters)
         {
@@ -29,7 +29,7 @@ public class BuddyFinder : IBuddyFinder
             // This could be a LINQ query, but I'm using a foreach to make it easier to understand.
             foreach (var movingCharacter in characters.Where(c => c.Name != baseCharacter.Name))
             {
-                // Compare sets of films without regard to order.
+                // Compare lists of films without regard to order.
                 if (baseCharacter.FilmUrls.OrderBy(f => f).SequenceEqual(movingCharacter.FilmUrls.OrderBy(f => f)))
                 {
                     buddyList.Add(movingCharacter);
