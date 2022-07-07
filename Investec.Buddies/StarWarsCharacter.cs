@@ -3,6 +3,9 @@ using System.Text.Json.Serialization;
 
 namespace Investec.Buddies;
 
+/// <summary>
+/// A character from the People collection of the Star Wars API.
+/// </summary>
 public record StarWarsCharacter
 {
     public string Name { get; init; } = "";

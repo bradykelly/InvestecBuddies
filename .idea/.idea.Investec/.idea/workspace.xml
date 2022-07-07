@@ -7,12 +7,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47cc79eb-3374-4720-898a-52f46936e7d6" name="Changes" comment="Fleshed out BuddyFinder">
+    <list default="true" id="47cc79eb-3374-4720-898a-52f46936e7d6" name="Changes" comment="Finding duplicate characters in buddy lists">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Investec/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Investec/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Investec.Buddies/ApiClientService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Investec.Buddies/ApiClientService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Investec.Buddies/BuddyFinder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Investec.Buddies/BuddyFinder.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Investec.Buddies/IApiClientService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Investec.Buddies/IApiClientService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Investec.Buddies/IBuddyFinder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Investec.Buddies/IBuddyFinder.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Investec.Buddies/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Investec.Buddies/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Investec.Buddies/StarWarsCharacter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Investec.Buddies/StarWarsCharacter.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,9 +29,6 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/198a6261cebc324728dcc4c178edc5f2894123f711722c80e8557cbfd27651/ThrowHelper.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/c6ad457575d35dcbff26c9a5e3fb1d92f1d3c55f25ef6ebf475367b5d8/List.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Personal/Dotnet Projects/TestDome/Investec/Investec.Buddies/ApiClientService.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Personal/Dotnet Projects/TestDome/Investec/Investec.Buddies/ApiClientService.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Personal/Dotnet Projects/TestDome/Investec/Investec.Buddies/BuddieFinder.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -82,7 +79,8 @@
       <updated>1657106004860</updated>
       <workItem from="1657106007715" duration="3626000" />
       <workItem from="1657120335199" duration="3286000" />
-      <workItem from="1657127156832" duration="7061000" />
+      <workItem from="1657127156832" duration="7406000" />
+      <workItem from="1657164175597" duration="2161000" />
     </task>
     <task id="LOCAL-00001" summary="New gitignore">
       <created>1657109015046</created>
@@ -112,7 +110,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657131601858</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Finding duplicate characters in buddy lists">
+      <created>1657135860072</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1657135860072</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -137,7 +142,8 @@
     <MESSAGE value="API call finally working" />
     <MESSAGE value="Improved some property names" />
     <MESSAGE value="Fleshed out BuddyFinder" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fleshed out BuddyFinder" />
+    <MESSAGE value="Finding duplicate characters in buddy lists" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finding duplicate characters in buddy lists" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

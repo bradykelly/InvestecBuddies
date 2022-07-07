@@ -17,7 +17,7 @@ public class BuddyFinder : IBuddyFinder
     ///  Find all Star Wars characters that are buddies.
     /// </summary>
     /// <returns>All lists of characters that are buddies, i.e they have the same lists of films.</returns>
-    public async Task<List<List<StarWarsCharacter>>> FindBuddyLists()
+    public async Task<List<List<StarWarsCharacter>>> FindAllBuddies()
     {
         var allBuddies = new List<List<StarWarsCharacter>>();
         var characters = await _apiClientService.GetAllCharacters();
@@ -27,12 +27,12 @@ public class BuddyFinder : IBuddyFinder
             var buddyList = new List<StarWarsCharacter>();
             
             // This could be a LINQ query, but I'm using a foreach to make it easier to understand.
-            foreach (var movingCharacter in characters.Where(c => c.Name != baseCharacter.Name))
+            foreach (var slidingCharacter in characters.Where(c => c.Name != baseCharacter.Name))
             {
                 // Compare lists of films without regard to order.
-                if (baseCharacter.FilmUrls.OrderBy(f => f).SequenceEqual(movingCharacter.FilmUrls.OrderBy(f => f)))
+                if (baseCharacter.FilmUrls.OrderBy(f => f).SequenceEqual(slidingCharacter.FilmUrls.OrderBy(f => f)))
                 {
-                    buddyList.Add(movingCharacter);
+                    buddyList.Add(slidingCharacter);
                 }
             }
 
@@ -41,7 +41,23 @@ public class BuddyFinder : IBuddyFinder
                 allBuddies.Add(buddyList);
             }
         }
-        
         return allBuddies;
     }
+
+    public async Task<List<StarWarsCharacter>> FindCharacterBuddies(string characterName)
+    {
+        var characters = await _apiClientService.GetAllCharacters();
+        
+        var target = characters.FirstOrDefault(c => c.Name.Equals(characterName, StringComparison.OrdinalIgnoreCase));
+        if (target == null)
+        {
+            throw new ArgumentException($"Character {characterName} not found.");
+        }
+        
+        return characters
+            .Where(cn => cn.Name != target.Name)
+            .Where(cf => target.FilmUrls.OrderBy(f => f).SequenceEqual(cf.FilmUrls.OrderBy(f => f)))
+            .ToList();
+    }
+    
 }
