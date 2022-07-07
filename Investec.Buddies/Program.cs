@@ -1,8 +1,5 @@
 using Investec.Buddies;
 
-// NB Just for debugging
-args = new[] { "Luke Skywalker" };
-
 IHost host = Host.CreateDefaultBuilder(args)
     .ConfigureServices(services =>
     {
@@ -12,8 +9,11 @@ IHost host = Host.CreateDefaultBuilder(args)
     })
     .Build();
 
-var finder = host.Services.GetRequiredService<IBuddyFinder>();
 
+// NB Just for debugging
+//args = new[] { "Luke Skywalker" };
+
+var finder = host.Services.GetRequiredService<IBuddyFinder>();
 
 // I forgot exactly what the problem statement was after our meeting had closed so I'm doing these two options
 if (args.Length > 0)
@@ -40,12 +40,12 @@ async Task ShowCharacterBuddyList(string characterName)
 // Not working right, seems to be returning duplicates
 async Task ShowAllBuddyLists(IBuddyFinder buddyFinder)
 {
-    Console.WriteLine("All Star Wars Buddies");
-    Console.WriteLine("======================");
-
     var budyLists = await buddyFinder.FindAllBuddies();
-    foreach (var list in budyLists)
+    Console.WriteLine();
+    Console.WriteLine("All Star Wars Buddies");
+    Console.WriteLine("======================");    
+    foreach (var name in budyLists.Keys.OrderBy(k => k))
     {
-        Console.WriteLine($"{string.Join(", ", list.Select(b => b.Name))}");
+        Console.WriteLine($"{name}:  {string.Join(", ", budyLists[name].Select(b => b.Name))}");
     }
 }

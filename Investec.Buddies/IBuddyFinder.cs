@@ -2,7 +2,7 @@
 
 public interface IBuddyFinder
 {
-    public Task<List<List<StarWarsCharacter>>> FindAllBuddies();
-    
-    public Task<List<StarWarsCharacter>> FindCharacterBuddies(string characterName);
+    public Task<Dictionary<string, List<StarWarsCharacter>>> FindAllBuddies();
+
+    public Task<List<StarWarsCharacter>> FindCharacterBuddies(string characterName, List<StarWarsCharacter>? searchCharacters = null);
 }
