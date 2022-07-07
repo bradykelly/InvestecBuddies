@@ -29,6 +29,7 @@ else
 async Task ShowCharacterBuddyList(string characterName)
 {
     var buddyList = await finder.FindCharacterBuddies(characterName);
+    Console.WriteLine();
     Console.WriteLine($"Buddy list for {characterName}:");
     Console.WriteLine($"================{new string('=', characterName.Length)}");
     foreach (var buddy in buddyList)

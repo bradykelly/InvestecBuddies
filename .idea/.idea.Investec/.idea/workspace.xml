@@ -7,7 +7,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47cc79eb-3374-4720-898a-52f46936e7d6" name="Changes" comment="">
+    <list default="true" id="47cc79eb-3374-4720-898a-52f46936e7d6" name="Changes" comment="Arranged al buddies into dictionary">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Investec/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Investec/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Investec.Buddies/BuddyFinder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Investec.Buddies/BuddyFinder.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Investec.Buddies/IBuddyFinder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Investec.Buddies/IBuddyFinder.cs" afterDir="false" />
@@ -83,7 +83,7 @@
       <workItem from="1657164175597" duration="3026000" />
       <workItem from="1657177311153" duration="745000" />
       <workItem from="1657210944897" duration="3341000" />
-      <workItem from="1657217593624" duration="1923000" />
+      <workItem from="1657217593624" duration="5007000" />
     </task>
     <task id="LOCAL-00001" summary="New gitignore">
       <created>1657109015046</created>
@@ -134,7 +134,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657211012190</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Arranged al buddies into dictionary">
+      <created>1657219869561</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1657219869561</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -162,7 +169,8 @@
     <MESSAGE value="Finding duplicate characters in buddy lists" />
     <MESSAGE value="Added option to find buddies for a specific character" />
     <MESSAGE value="About to try another all buddies approach" />
-    <option name="LAST_COMMIT_MESSAGE" value="About to try another all buddies approach" />
+    <MESSAGE value="Arranged al buddies into dictionary" />
+    <option name="LAST_COMMIT_MESSAGE" value="Arranged al buddies into dictionary" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
